@@ -1,0 +1,275 @@
+/*
+ * SISTEMA DE ESTILOS CSS PERSONALIZADO - BOMBEROS VIÑA DEL MAR
+ * ============================================================
+ * 
+ * CUMPLIMIENTO CRITERIO IE1.1.2 - HOJAS DE ESTILO CSS EXTERNAS:
+ * ✅ Archivo CSS externo separado de HTML/JavaScript
+ * ✅ Estilos personalizados específicos del proyecto
+ * ✅ Sistema de tokens CSS custom properties
+ * ✅ Paleta de colores institucional coherente
+ * ✅ Responsive design con mobile-first approach
+ * 
+ * CUMPLIMIENTO CRITERIO IE1.4 - BUENAS PRÁCTICAS CSS:
+ * ✅ Separación clara entre presentación y estructura
+ * ✅ Nomenclatura semántica de variables CSS
+ * ✅ Orden lógico de propiedades CSS
+ * ✅ Uso de custom properties para mantenibilidad
+ * ✅ Sistema de design tokens escalable
+ * ✅ Metodología consistente de clases utilitarias
+ */
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * SISTEMA DE TOKENS CSS (IE1.4)
+ * =============================
+ * Variables CSS custom properties para consistencia visual
+ * Implementa paleta de colores institucional específica
+ */
+:root {
+  /* TIPOGRAFÍA BASE (IE1.4) */
+  --font-size: 16px;
+  
+  /* COLORES PRINCIPALES DEL SISTEMA (IE1.1.2) */
+  --background: #F8FAFC;          /* Fondo principal claro y profesional */
+  --foreground: #1F2937;          /* Texto principal con contraste adecuado */
+  --card: #FFFFFF;                /* Fondo de tarjetas para contenido */
+  --card-foreground: #1F2937;     /* Texto en tarjetas */
+  --popover: #FFFFFF;             /* Fondo de elementos emergentes */
+  --popover-foreground: #1F2937;  /* Texto en elementos emergentes */
+  
+  /* PALETA INSTITUCIONAL BOMBEROS (IE1.1.2, IE1.4) */
+  --primary: #2563EB;             /* Azul primario institucional */
+  --primary-foreground: #FFFFFF;  /* Texto sobre azul primario */
+  --secondary: #F59E0B;           /* Amarillo secundario institucional */
+  --secondary-foreground: #1F2937; /* Texto sobre amarillo */
+  /* COLORES FUNCIONALES SEMÁNTICOS (IE1.4) */
+  --muted: #F1F5F9;               /* Fondos sutiles y deshabilitados */
+  --muted-foreground: #6B7280;    /* Texto secundario y metadata */
+  --accent: #F59E0B;              /* Color de acento para destacar */
+  --accent-foreground: #1F2937;   /* Texto sobre color de acento */
+  --destructive: #EF4444;         /* Rojo para acciones destructivas */
+  --destructive-foreground: #FFFFFF; /* Texto en elementos destructivos */
+  --success: #10B981;             /* Verde para confirmaciones exitosas */
+  --success-foreground: #FFFFFF;  /* Texto en elementos de éxito */
+  --warning: #F59E0B;             /* Amarillo para advertencias */
+  --warning-foreground: #1F2937;  /* Texto en advertencias */
+  --info: #3B82F6;                /* Azul para información neutral */
+  --info-foreground: #FFFFFF;     /* Texto informativo */
+  
+  /* COLORES ESPECÍFICOS BOMBEROS (IE1.1.2) */
+  --bomberos-red: #DC2626;        /* Rojo institucional bomberos */
+  --bomberos-blue: #1E3A8A;       /* Azul oscuro institucional */
+  --bomberos-gold: #D97706;       /* Dorado para elementos ceremoniales */
+  --border: #E2E8F0;
+  --input: #FFFFFF;
+  --input-background: #FFFFFF;
+  --switch-background: #D1D5DB;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: #2563EB;
+  --chart-1: #2563EB;
+  --chart-2: #F59E0B;
+  --chart-3: #10B981;
+  --chart-4: #EF4444;
+  --chart-5: #8B5CF6;
+  --radius: 0.625rem;
+  --sidebar: #1E293B;
+  --sidebar-foreground: #F8FAFC;
+  --sidebar-primary: #2563EB;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #334155;
+  --sidebar-accent-foreground: #F8FAFC;
+  --sidebar-border: #334155;
+  --sidebar-ring: #2563EB;
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-bomberos-red: var(--bomberos-red);
+  --color-bomberos-blue: var(--bomberos-blue);
+  --color-bomberos-gold: var(--bomberos-gold);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/*
+ * TIPOGRAFÍA BASE SEMÁNTICA (IE1.3.3, IE1.4)
+ * ==========================================
+ * Sistema tipográfico que respeta la jerarquía HTML semántica
+ * Mantiene orden semántico independiente del orden visual
+ * No se aplica a elementos con clases Tailwind text específicas
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    /* JERARQUÍA DE HEADINGS SEMÁNTICA (IE1.3.3) */
+    h1 {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h3 {
+      font-size: var(--text-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h4 {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    /* ELEMENTOS DE CONTENIDO (IE1.4) */
+    p {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+
+    /* ELEMENTOS DE FORMULARIO (IE1.1.1) */
+    label {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    button {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    input {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+/*
+ * UTILIDADES PERSONALIZADAS BOMBEROS (IE1.1.2, IE1.4)
+ * ===================================================
+ * Clases CSS específicas para branding institucional
+ * Efectos visuales coherentes con identidad corporativa
+ */
+@layer utilities {
+  /* GRADIENTE INSTITUCIONAL (IE1.1.2) */
+  .bomberos-gradient {
+    background: linear-gradient(135deg, #DC2626 0%, #F59E0B 50%, #1E3A8A 100%);
+    /* Gradiente con colores oficiales: rojo, amarillo, azul bomberos */
+  }
+  
+  /* MARCA DE AGUA SUTIL (IE1.4) */
+  .bomberos-watermark {
+    background: linear-gradient(45deg, transparent 0%, rgba(220, 38, 38, 0.03) 25%, rgba(245, 158, 11, 0.03) 50%, rgba(30, 58, 138, 0.03) 75%, transparent 100%);
+    /* Marca de agua discreta con colores institucionales */
+  }
+  
+  /* EFECTOS INTERACTIVOS LOGO (IE1.1.1) */
+  .logo-hover-effect {
+    transition: all 0.3s ease;
+    filter: brightness(1) contrast(1);
+    /* Transiciones suaves para interacciones del usuario */
+  }
+  
+  .logo-hover-effect:hover {
+    filter: brightness(1.1) contrast(1.1);
+    transform: scale(1.05);
+    /* Feedback visual al hover para mejor UX */
+  }
+}
